@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
+var favicon = require('serve-favicon');
 var port = process.env.PORT || 8080;
+
+app.use(favicon('./public/favicon.ico'));
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
