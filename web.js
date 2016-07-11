@@ -17,7 +17,8 @@ var users = [{
 app.get('/', function (req, res) {
   var users_msg;
   users.forEach(function(user) {
-      users_msg += "Name: " + user.name + " Role: " + user.role+"<br/>";   
+      if(user)
+        users_msg += "Name: " + user.name + " Role: " + user.role+"<br/>";   
   });
    res.send(users_msg);
 });
