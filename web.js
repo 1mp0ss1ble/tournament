@@ -3,13 +3,19 @@ var app = express();
 //var favicon = require('serve-favicon');
 var port = process.env.PORT || 3000;
 var users = [{
-    name: 'Nurzhinho'
-}];
+        name: 'Nurzhinho',
+        role: "Moderator"
+    },
+    {
+        name: 'Askaro',
+        role 'Developer'
+    }
+];
 
 
 //app.use(favicon('./public/favicon.ico'));
 app.get('/', function (req, res) {
-  res.send('Hello Ichi!');
+  res.send(users);
 });
 
 
