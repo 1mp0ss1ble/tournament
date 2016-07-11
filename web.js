@@ -1,11 +1,11 @@
 var express = require('express');
-var app = express();
+var app = express(); 
 //var favicon = require('serve-favicon');
 var port = process.env.PORT || 3000;
 
 //app.use(favicon('./public/favicon.ico'));
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('Hello Ichi!');
 });
 
 
