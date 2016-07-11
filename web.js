@@ -15,7 +15,9 @@ var users = [{
 
 //app.use(favicon('./public/favicon.ico'));
 app.get('/', function (req, res) {
-  res.send(users);
+  users.forEach(function(user) {
+     res.send("Name: " + user.name + " Role: " + user.role);     
+  });
 });
 
 
