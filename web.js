@@ -15,9 +15,11 @@ var users = [{
 
 //app.use(favicon('./public/favicon.ico'));
 app.get('/', function (req, res) {
+  var users_msg;
   users.forEach(function(user) {
-     res.send("Name: " + user.name + " Role: " + user.role);     
+      users_msg += "Name: " + user.name + " Role: " + user.role+"<br/>";   
   });
+   res.send(users_msg);
 });
 
 
