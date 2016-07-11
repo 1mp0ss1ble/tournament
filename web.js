@@ -4,11 +4,11 @@ var app = express();
 var port = process.env.PORT || 3000;
 var users = [{
         name: 'Nurzhinho',
-        role: "Moderator"
+        role: Moderator'
     },
     {
         name: 'Askaro',
-        role 'Developer'
+        role: 'Developer'
     }
 ];
 
