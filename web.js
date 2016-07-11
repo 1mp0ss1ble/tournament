@@ -18,7 +18,7 @@ app.all('/user/:id/:op?', function(req, res, next) {
     if (req.user) {
         next();
     } else {
-        next(new Error('cannot find user ' + req.params.id));
+        throw new Error('cannot find user ' + req.params.id);
     }
 });
 
