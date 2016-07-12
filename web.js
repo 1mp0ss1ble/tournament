@@ -1,5 +1,9 @@
 var express = require('express');
 var app = express();
+var db = require('./db');
+//db.createTable();
+//db.insertUser();
+db.connect();
 //var favicon = require('serve-favicon');
 var port = process.env.PORT || 3000;
 var users = [{
@@ -11,6 +15,9 @@ var users = [{
         role: 'Developer'
     }
 ];
+
+
+
 
 
 //app.use(favicon('./public/favicon.ico'));
