@@ -1,0 +1,8 @@
+html
+head
+body
+- var x=1;
+for team in teams
+ p #{x +' '+ team.description +' | rating:' + team.rating +'| created on: '+team.createdon} 
+ - x++;
+ - console.log(team);

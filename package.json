@@ -4,11 +4,16 @@
   "description": "",
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon web.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "pg": "6.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
   }
 }
