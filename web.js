@@ -40,16 +40,16 @@ app.listen(port, function () {
 */
 
 
-var favicon = require('serve-favicon');
-
 
 var express = require('express')
   , app = express();
 
+var favicon = require('serve-favicon');
+
 var bodyParser = require('body-parser');
 
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
-app.use(favicon('./public/favicon.ico'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
