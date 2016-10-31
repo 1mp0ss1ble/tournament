@@ -61,6 +61,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(require('./controllers'))
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('Listening on port 3000...')
 })
