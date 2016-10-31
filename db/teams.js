@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 var db       = require('pg')
   , teamBase = "postgres://dvzapeelqheaqu:oO5BK3-4tSrIJ-enryi2DbcR8Z@ec2-54-235-108-156.compute-1.amazonaws.com:5432/du0j3d9rj857q"
   , table    = {};
 
 
+=======
+var teamBase = "postgres://dvzapeelqheaqu:oO5BK3-4tSrIJ-enryi2DbcR8Z@ec2-54-235-108-156.compute-1.amazonaws.com:5432/du0j3d9rj857q"
+
+var db;
+
+exports.init = function(_db){
+    db = _db;
+}
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
 
 exports.getAll = function(req, res){
   var teams = [];
@@ -14,6 +24,7 @@ exports.getAll = function(req, res){
         
         query.on('end',function() {
             client.end(); 
+<<<<<<< HEAD
             if(req.xhr){
                 res.json({teams:teams});
             }else{
@@ -21,6 +32,9 @@ exports.getAll = function(req, res){
             }
             
             
+=======
+            res.render('teams/teams.jade',{teams:teams});
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
             //next();
         });
         
@@ -34,6 +48,7 @@ exports.getAll = function(req, res){
 };
 
 
+<<<<<<< HEAD
 exports.get = function(req, res){
   var team = {};
     var id = req.params.id;
@@ -65,13 +80,19 @@ exports.get = function(req, res){
 
 
 
+=======
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
 exports.add  = function(req,res){
     var team = req.body;
     var currDate = new Date().toJSON().slice(0,10);
     
     db.connect(teamBase, function(err, client) {
     if (err) throw err;
+<<<<<<< HEAD
     console.log('Adding team...');
+=======
+    console.log('Adding team..');
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
 
       var query = client.query('INSERT INTO teams (description,rating,createdOn) VALUES ($1,1000,CURRENT_DATE);', [team.description]);
         
@@ -97,10 +118,14 @@ exports.add  = function(req,res){
 
 
 
+<<<<<<< HEAD
 /* --------------/ Table Operations  /---------------- */
 
 
  table.create = function(req, res){
+=======
+ exports.createTable = function(req, res){
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
   db.connect(teamBase, function(err, client) {
     if (err) throw err;
     console.log('Creating teams table');
@@ -117,7 +142,11 @@ exports.add  = function(req,res){
 };
 
 
+<<<<<<< HEAD
  table.delete = function(req,res){
+=======
+exports.deleteTable = function(req,res){
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
   db.connect(teamBase, function(err, client){
     if(err) throw err;
       var query = client.query('drop table teams');
@@ -127,7 +156,13 @@ exports.add  = function(req,res){
       })
   }); 
 };
+<<<<<<< HEAD
  
  exports.table = table;
 
 /* ------------------------------ */
+=======
+
+
+
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08

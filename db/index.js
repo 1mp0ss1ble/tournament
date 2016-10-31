@@ -5,10 +5,15 @@ var herokuConnection = "postgres://yncwjsgvfciuvu:60hcxPuBLWdhGv8TCQShQp_qUT@ec2
 var teamBase = "postgres://dvzapeelqheaqu:oO5BK3-4tSrIJ-enryi2DbcR8Z@ec2-54-235-108-156.compute-1.amazonaws.com:5432/du0j3d9rj857q"
 
 db.defaults.ssl = true;
+<<<<<<< HEAD
 
 exports.connect = function(){
 
   db.connect(herokuConnection, function(err, client) {
+=======
+exports.connect = function(){
+db.connect(herokuConnection, function(err, client) {
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
   
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
@@ -79,11 +84,15 @@ exports.createTeamsTable = function (req,res){
     teams.createTable(req,res,db);
 }
 */
+<<<<<<< HEAD
 
 
 
 //users.init(db);
 
+=======
+teams.init(db);
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
 exports.teams = teams;
 
 

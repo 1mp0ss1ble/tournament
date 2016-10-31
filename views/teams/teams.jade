@@ -3,6 +3,7 @@ head
 body
 - var x=1;
 for team in teams
+<<<<<<< HEAD
  p #{team.id +' '+ team.description +' | rating:' + team.rating +'| created on: '+team.createdon} 
    a(href="/teams/#{team.id}")=team.description
  - x++;
@@ -11,3 +12,8 @@ p
   li: a(href="/teams/add") Create Team
   li: a(href='/') Home 
   li: a(href='/players') Players 
+=======
+ p #{x +' '+ team.description +' | rating:' + team.rating +'| created on: '+team.createdon} 
+ - x++;
+ - console.log(team);
+>>>>>>> 62fbe8c5314a83e6cd2c0c30ceb49653798adc08
