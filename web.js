@@ -42,14 +42,14 @@ app.listen(port, function () {
 
 
 var express = require('express')
-  , app = express();
 
 var favicon = require('serve-favicon');
 
-var bodyParser = require('body-parser');
+var app = express();
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
+var bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
 
