@@ -1,0 +1,16 @@
+html
+head
+title Players
+body
+h2 Players
+for player in players
+ p 
+  a(href="/players/#{player.id}")=player.name
+ 
+p
+ ul
+   li: a(href="/players/add") Create Player
+   li: a(href="/teams") Teams
+   li: a(href="/") Home
+   
+   

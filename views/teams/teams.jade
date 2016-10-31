@@ -1,0 +1,13 @@
+html
+head
+body
+- var x=1;
+for team in teams
+ p #{team.id +' '+ team.description +' | rating:' + team.rating +'| created on: '+team.createdon} 
+   a(href="/teams/#{team.id}")=team.description
+ - x++;
+p
+ ul
+  li: a(href="/teams/add") Create Team
+  li: a(href='/') Home 
+  li: a(href='/players') Players 
