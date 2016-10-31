@@ -19,7 +19,7 @@ var users = [{
 ];
 
 var myLogger = function(req,req,next){
-  //console.log(req);  
+  //console.log(req);
   next();
 };
 
@@ -33,7 +33,7 @@ app.set('view engine', 'jade');
 
 
 app.listen(port, function () {
-  //console.log(process.env.MONGOLAB_URI);    
+  //console.log(process.env.MONGOLAB_URI);
   console.log('Example app listening on port 3000!!!');
 });
 
@@ -41,7 +41,7 @@ app.listen(port, function () {
 
 
 var express = require('express')
-  , app = express()
+  , app = express();
 
 var bodyParser = require('body-parser');
 
@@ -53,7 +53,7 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 
-app.use(require('./controllers')) 
+app.use(require('./controllers'))
 
 app.listen(3000, function() {
   console.log('Listening on port 3000...')
