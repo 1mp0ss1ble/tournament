@@ -39,6 +39,7 @@ app.listen(port, function () {
 
 */
 
+var port = process.env.PORT || 3000;
 
 
 var express = require('express')
@@ -55,7 +56,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.set('view engine', 'jade');
 
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 
 app.use(require('./controllers'))
