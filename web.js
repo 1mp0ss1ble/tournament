@@ -41,7 +41,6 @@ app.listen(port, function () {
 
 
 var favicon = require('serve-favicon');
-app.use(favicon('./public/favicon.ico'));
 
 
 var express = require('express')
@@ -49,6 +48,8 @@ var express = require('express')
 
 var bodyParser = require('body-parser');
 
+
+app.use(favicon('./public/favicon.ico'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
