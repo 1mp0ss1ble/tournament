@@ -41,6 +41,8 @@ app.listen(port, function () {
 
 
 var favicon = require('serve-favicon');
+app.use(favicon('./public/favicon.ico'));
+
 
 var express = require('express')
   , app = express();

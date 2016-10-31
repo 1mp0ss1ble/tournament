@@ -2,7 +2,7 @@ var express  = require('express')
   , router = express.Router();
 
 
-//app.use(favicon('./public/favicon.ico'));
+app.use(favicon('./public/favicon.ico'));
 
 router.get('/', function (req, res, next) {
     res.end('Main Page');
