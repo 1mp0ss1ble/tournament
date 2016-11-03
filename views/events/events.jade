@@ -1,0 +1,17 @@
+html
+head
+title Events
+body
+h4 Events
+for event in events
+ p 
+  a(href="/events/#{event.id}")=event.description
+ 
+h3 Links 
+p
+ ul
+   li: a(href="/events/add") Create Event
+   li: a(href="/events") Events
+   li: a(href="/") Home
+   
+   

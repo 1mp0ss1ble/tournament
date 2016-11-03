@@ -1,13 +1,14 @@
 script(type='text/javascript').
- var local_data =!{JSON.stringify(player)}
+ var local_data =!{JSON.stringify(event)}
 script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
 
 style(type='text/css')
   
-h2 Player: #{player.name}
+h2 Event: #{event.description}
 
-div#player-teams
+div#event-teams
  h3 Teams
  ul
+ 
 
-a(href='/players') Back...
+a(href='/events') Go to Events...

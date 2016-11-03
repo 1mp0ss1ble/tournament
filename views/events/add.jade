@@ -1,0 +1,17 @@
+extends ../layouts/layout
+//script(src='/vendor/bower_components/jquery/dist/jquery.min.js')
+script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
+style(type='text/css')
+ 
+block content
+ h3.ggg Create Event
+ form(action='/events/add' method='post')
+  input(id='name', type='text', value='', placeholder='Event Name', name='description')  
+  input(type='submit', value='Create')
+  
+
+ 
+
+
+  
+

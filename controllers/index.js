@@ -3,7 +3,7 @@ var express  = require('express')
 
 
 router.get('/', function (req, res, next) {
-    res.end('Main Page');
+    res.render("common/index");
 });
 
 
@@ -13,6 +13,9 @@ router.use('/teams', require('./teams'))
 router.use('/users', require('./users'))
 
 router.use('/players', require('./players'))
+
+
+router.use('/events', require('./events'))
 
 
 
