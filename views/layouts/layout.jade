@@ -1,15 +1,22 @@
 html
-title Home
 head
+ title Welcome | Soccer Stars
+ meta(name='viewport', content='width=device-width, initial-scale=1.0')
+ link(href='/vendor/bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet')
+ script(src="/vendor/bower_components/jquery/dist/jquery.min.js")
+ script(src="/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js")
 body
-ul
- li 
-  a(href="/teams") Teams
- li 
-  a(href="/events") Events
- li 
-  a(href="/players") Players
-  
-block content
- p Loading...
+ div.container
+      div.container.clearfix
+        nav
+         ul.nav.nav-pills.pull-right
+          li(role='presentation') 
+           a(href="/teams") Teams
+          li(role='presentation')  
+           a(href="/events") Events
+          li(role='presentation') 
+           a(href="/players") Players
+ div.container              
+  block content
+   p Loading...
   

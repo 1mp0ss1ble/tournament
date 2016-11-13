@@ -37,7 +37,7 @@ app.listen(port, function () {
   console.log('Example app listening on port 3000!!!');
 });
 
-*/
+*/ 
 
 var port = process.env.PORT || 3000;
 
@@ -62,5 +62,5 @@ app.use(express.static(__dirname + '/public'));
 app.use(require('./controllers'))
 
 app.listen(port, function() {
-  console.log('Listening on port 3000...')
+  console.log('Listening on port dev.env or 3000...')
 })

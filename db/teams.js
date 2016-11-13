@@ -7,7 +7,7 @@ var db       = require('pg')
 exports.getAll = function(req, res){
   var teams = [];
     db.connect(teamBase, function(err, client, done) {
-       var query = client.query('SELECT * from teams');
+       var query = client.query('SELECT * from teams order by rating desc, description asc');
         query.on('row', function(row) {
             teams.push(row);
         });
@@ -73,7 +73,7 @@ exports.add  = function(req,res){
     if (err) throw err;
     console.log('Adding team...');
 
-      var query = client.query('INSERT INTO teams (description,rating,createdOn) VALUES ($1,1000,CURRENT_DATE);', [team.description]);
+      var query = client.query('INSERT INTO teams (description,rating,createdOn) VALUES ($1,$2,CURRENT_DATE);', [team.description,team.rating]);
         
         /* 
         query.on('row', function (row) {
