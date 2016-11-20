@@ -3,20 +3,31 @@ head
  title Welcome | Soccer Stars
  meta(name='viewport', content='width=device-width, initial-scale=1.0')
  link(href='/vendor/bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet')
+ link(href='/css/site.css' rel='stylesheet')
  script(src="/vendor/bower_components/jquery/dist/jquery.min.js")
  script(src="/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js")
 body
- div.container
-      div.container.clearfix
-        nav
-         ul.nav.nav-pills.pull-right
-          li(role='presentation') 
-           a(href="/teams") Teams
-          li(role='presentation')  
-           a(href="/events") Events
-          li(role='presentation') 
-           a(href="/players") Players
- div.container              
-  block content
-   p Loading...
-  
+    //header
+      div.container
+ div.container      
+   nav.navbar.navbar-inverse
+        div.navbar-header
+          button.navbar-toggle.collapsed(data-toggle='collapse' data-target='#navbar-collapse-3')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+           a.brand-link.navbar-brand(href='/') Soccer Stars
+        div.collapse.navbar-collapse#navbar-collapse-3
+          ul.nav.navbar-nav.navbar-right.menu-links
+            li 
+              a(href="/teams") Teams
+            li  
+              a(href="/events") Events
+            li
+              a(href="/players") Players
+   div.conainer-fluid              
+      block content
+   footer.navbar-bottom.row-fluid
+      div.container
+        p.text-muted Soccer Fans. 2016 - 2017

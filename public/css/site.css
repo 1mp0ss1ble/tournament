@@ -1,4 +1,73 @@
-body {
-    
+body {    
 text-align: center;
+background-color: #232426;
+color:#B7B7B4;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+table {
+    
+    border:2px solid #3B3A38;
+}
+table thead {
+    color:#B7B7B4;
+    background-color: #131515;
+}
+
+
+.table {
+  border: 1px solid #3B3A38;
+}
+
+
+a, a:hover {
+    color: cadetblue;
+}
+
+
+.brand-link {
+ color:white !important;
+}
+
+.brand-link:hover{
+    text-decoration: none;
+}
+
+.menu-links a:hover{
+    color:#B7B7B4 !important;
+    text-decoration: underline !important;
+}
+
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+   border: 1px solid #3B3A38;
+}
+
+/*
+header, footer {
+    background-color: #070707;
+}
+*/
+
+
+
+/* overrid BS table */
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #202020; 
+ }
+
+table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: #181818; 
+ }
+
+

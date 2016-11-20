@@ -2,10 +2,20 @@ extends ../layouts/layout
 
 block content
  h2 Players
- for player in players
-  p 
-   a(href="/players/#{player.id}")=player.name
- 
+ table.table.table-striped.table-bordered.table-hovertable
+  thead
+   tr
+    td #
+    td Player
+    td Points
+    
+  tbody    
+   for player in players
+    tr
+     td # 
+     td
+      a(href="/players/#{player.id}")=player.name
+     td #{player.rating}
  
    
    

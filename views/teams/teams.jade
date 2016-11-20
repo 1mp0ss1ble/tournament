@@ -1,16 +1,17 @@
 extends ../layouts/layout
 
 block content
- h2 Atyrau Soccer teams ratings
+ h2 Futsal leaderboards - Atyrau
  - var x=1;
- table.table.table-striped.table-bordered.table-hovertable
-  tr 
-   td #
-   td Team
-   td Points
- 
-  for team in teams
-   tr
+ table.table.table-striped.table-bordered.table-hovertable.table-inverse
+  thead
+   tr 
+    td #
+    td Team
+    td Points
+  tbody
+   for team in teams
+    tr
        td #{x}
        td(style='width:80%') 
             a(href="/teams/#{team.id}")=team.description
@@ -18,6 +19,6 @@ block content
             //| (#{team.id +' '+ team.description +' | rating:' + team.rating +'| created on: '+team.createdon})
        td(style='width:15%') #{team.rating}
    
-   - x++;
+    - x++;
  
  

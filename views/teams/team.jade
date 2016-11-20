@@ -1,11 +1,26 @@
-script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
+extends ../layouts/layout
 
-style(type='text/css')
-  
-h2 TEAM: #{team.description}
+block content
 
-div#team-players
- h3 Players
- ul
+    h2 Team: #{team.description}
+    p Sponsor: No Sponsor (edit)
+    p Captain: No Captain (edit)
+    
+    div#team-events
+     h3 Events (edit)
+     ul 
+      l1 Some event
+    
+    div#team-players
+     h3 Players
+     ul
+    
+    div.team-statistics
+     h3 Statistics
+     ul
+       li empty
+    
+      
+    a(href='/teams') Back...
 
-a(href='/teams') Back...
+    script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
