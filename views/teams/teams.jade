@@ -14,7 +14,7 @@ block content
     tr
        td #{x}
        td(style='width:80%') 
-            a(href="/teams/#{team.id}")=team.description
+            a(href="/teams/team?desc=#{team.desc}")=team.desc
             span.ff 
             //| (#{team.id +' '+ team.description +' | rating:' + team.rating +'| created on: '+team.createdon})
        td(style='width:15%') #{team.rating}

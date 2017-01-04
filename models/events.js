@@ -10,7 +10,13 @@ exports.add = function(req, res){
 
 
 exports.getAll = function(req, res){
-    db.getAll(req, res);
+    db.getAll(function(err, events){
+       if(req.xhr){
+                res.json({events: events});
+            }else{
+                res.render('events/events.jade',{events: events});    
+            }
+    });
 }
 
 exports.get = function(req, res){

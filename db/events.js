@@ -1,9 +1,37 @@
-var db       = require('pg')
-  , eventBase = "postgres://dvzapeelqheaqu:oO5BK3-4tSrIJ-enryi2DbcR8Z@ec2-54-235-108-156.compute-1.amazonaws.com:5432/du0j3d9rj857q"
-  , table    = {};
+var mongoose = require('mongoose')
+  , config   = require('./config').config;
+
+var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
+                replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };       
+ 
+var mongodbUri = 'mongodb://writer:Qwerty11@ds161295.mlab.com:61295/soccer';
+ 
+mongoose.connect(mongodbUri, options);
+
+var conn = mongoose.connection; 
+
+var Schema = new mongoose.Schema({
+    id : String,
+    desc : String,
+    rating : Number,
+    sponsor : String,
+});
+
+var Model = mongoose.model('events',Schema);
+
+conn.on('error', console.error.bind(console, 'connection error:')); 
 
 
 
+
+
+exports.getAll = function(cb){
+    Model.find(function(err, events){
+        cb(err, events);
+    });
+}
+
+/*
 exports.getAll = function(req, res){
   var events = [];
     db.connect(eventBase, function(err, client, done) {
@@ -33,7 +61,10 @@ exports.getAll = function(req, res){
     
 };
 
+*/
 
+
+/*
 exports.get = function(req, res){
   var event = {};
     var id = req.params.id;
@@ -63,7 +94,10 @@ exports.get = function(req, res){
     
 };
 
+*/
 
+
+/*
 
 exports.add  = function(req,res){
     var event = req.body;
@@ -75,11 +109,7 @@ exports.add  = function(req,res){
 
       var query = client.query('INSERT INTO events (description,rating,createdOn) VALUES ($1,1000,CURRENT_DATE);', [event.description]);
         
-        /* 
-        query.on('row', function (row) {
-            results.push(row);
-        });
-        */
+       
         
         query.on('end', function () {
             client.end();
@@ -95,11 +125,11 @@ exports.add  = function(req,res){
   });
 }
 
-
+*/
 
 /* --------------/ Table Operations  /---------------- */
 
-
+/*
  table.create = function(req, res){
   db.connect(eventBase, function(err, client) {
     if (err) throw err;
@@ -129,5 +159,6 @@ exports.add  = function(req,res){
 };
  
  exports.table = table;
+*/
 
 /* ------------------------------ */

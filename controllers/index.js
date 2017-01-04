@@ -8,15 +8,15 @@ router.get('/', function (req, res, next) {
 
 
 
-router.use('/teams', require('./teams'))
+router.use('/teams', require('./teams'));
 
-router.use('/users', require('./users'))
+router.use('/users', require('./users'));
 
-router.use('/players', require('./players'))
+router.use('/players', require('./players'));
 
+router.use('/events', require('./events'));
 
-router.use('/events', require('./events'))
-
+router.use('/options', require('./options'));
 
 
 

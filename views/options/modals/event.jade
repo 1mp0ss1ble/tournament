@@ -1,0 +1,15 @@
+div.modal-dialog(role="document")
+ div.modal-content
+  div.modal-header 
+   h4 New Event
+  div.modal-body
+   form(id="options-event-create" action="/options/create" method="POST")
+    input(type="text" hidden value="event")
+    input.form-control(type="text" name="desc" required placeholder="description") 
+    input.form-control(type="text" name="owner" placeholder="organizer")
+    input.btn.btn-primary(value="create" type="submit")
+    
+    
+   
+  
+   

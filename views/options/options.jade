@@ -1,0 +1,19 @@
+extends ../layouts/layout
+
+block content
+ h3.text-muted Options
+ h4 
+  a( id="modal-event" href="#modal/event" data-toggle="modal" data-target="#myModal") Add Event
+ h4
+  a(href="#modal/team") Add Team
+ h4
+  a(href="#modal/player") Add Player
+ 
+ 
+ div#myModal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+ 
+ script(type='text/javascript').
+  var local_data =!{JSON.stringify({"ff":1})}
+ script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
+   
+   

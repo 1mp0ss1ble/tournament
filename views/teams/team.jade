@@ -1,26 +1,45 @@
 extends ../layouts/layout
 
 block content
-
-    h2 Team: #{team.description}
-    p Sponsor: No Sponsor (edit)
-    p Captain: No Captain (edit)
+ form(action="update" method="POST")
+   div#team-details
+     h3 Details
+     p Desc: 
+      <input type="text" name="desc" value="#{team.desc}" placeholder="new">
+     p Sponsor:
+      <input type="text" name="sponsor" value="#{team.sponsor}" placeholder="new">
+     p Captain: 
+      <input type="text" name="captain"  value="#{team.captain}" placeholder="new">
+     input(type="text" name="_id" value="#{team._id}" hidden )  
+    
     
     div#team-events
-     h3 Events (edit)
+     h3 Events 
      ul 
       l1 Some event
+      
+     
     
     div#team-players
-     h3 Players
+     h3 Players 
+        span.link add
      ul
+      
+    
     
     div.team-statistics
      h3 Statistics
      ul
-       li empty
+      l1 Some event
     
+    div.navigation-links
+    
+     button(class="btn btn-primary" type="submit") Save 
+    
+     a(href='/teams' class="btn btn-danger") Remove 
       
-    a(href='/teams') Back...
+     a(href='/teams' class="btn btn-default") Back
 
     script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
+   
+    

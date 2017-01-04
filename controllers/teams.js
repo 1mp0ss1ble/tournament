@@ -9,9 +9,11 @@ router.get('/', function(req, res){
    teams.getAll(req,res);
 });
 
+/*
 router.get('/:id(\\d+)/', function(req, res){
    teams.get(req,res);
 });
+*/
 
 //router.use(express.static(__dirname+'/views'))
 
@@ -32,6 +34,18 @@ router.get('/deleteTable',function(req,res){
 router.get('/createTable',function(req,res){
     teams.table.create(req,res);
 });
+
+router.get('/team',function(req,res){
+    //teams.table.create(req,res);
+    teams.get(req,res);
+    //res.end("FF" + req.params.desc);
+});
+
+
+router.post('/update', function(req,res){
+    teams.update(req,res);
+})
+
 
 
 

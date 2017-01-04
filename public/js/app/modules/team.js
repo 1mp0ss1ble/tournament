@@ -10,6 +10,7 @@ define(function(require){
         console.log('module team init');
         
         //load players
+        /*
         $.get(baseUrl+'players',{teamId:teamId},function(res){
             console.log(teamId);
             console.log(res.players);
@@ -22,7 +23,7 @@ define(function(require){
             });
         })
         
-        
+        */
     }
     
     

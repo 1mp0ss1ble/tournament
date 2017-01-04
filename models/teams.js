@@ -18,4 +18,26 @@ exports.get = function(req, res){
 }
 
 
+exports.update = function(req,res){
+    
+    
+    db.update(req.body, function(err,model){
+        
+        if(err){
+            res.send(err);
+        }
+        else{
+       
+            if(req.xhr){
+                req.json(model);
+            }
+            res.redirect('/teams/team?desc='+model.desc+'');
+        }
+    });
+    
+}
+
+
+
+
 exports.table = db.table;

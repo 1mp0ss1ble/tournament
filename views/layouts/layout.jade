@@ -3,7 +3,8 @@ head
  title Welcome | Soccer Stars
  meta(name='viewport', content='width=device-width, initial-scale=1.0')
  link(href='/vendor/bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet')
- link(href='/css/site.css' rel='stylesheet')
+ link(href='/css/style.css' rel='stylesheet')
+ link(href='/css/style-modals.css' rel='stylesheet')
  script(src="/vendor/bower_components/jquery/dist/jquery.min.js")
  script(src="/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js")
 body
@@ -26,8 +27,11 @@ body
               a(href="/events") Events
             li
               a(href="/players") Players
+            li
+              a(href="/options") Options
    div.conainer-fluid              
       block content
    footer.navbar-bottom.row-fluid
+      hr
       div.container
-        p.text-muted Soccer Fans. 2016 - 2017
+        p.text-muted  Soccer Beta v1.01 |  2017

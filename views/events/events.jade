@@ -1,8 +1,7 @@
 extends ../layouts/layout
 block content
  for event in events
-  p 
-   a(href="/events/#{event.id}")=event.description
+  p.uppercased 
+   a(href="/events/#{event.id}")= event.desc
  
-   
    

@@ -14,6 +14,8 @@ define(function(require){
     
   var player = require('./app/modules/player');
     
+ var options = require('./app/modules/options');    
+    
     
   //ff.init();
     
@@ -31,6 +33,9 @@ define(function(require){
  else if(clientUrl[0] === "players"){
      player.init(clientUrl[1], baseUrl);
  
+ }
+ else if(clientUrl[0] === "options"){
+     options.init(clientUrl[1], baseUrl);
  }
  else{
      
