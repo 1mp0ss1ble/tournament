@@ -12,7 +12,7 @@ define(function(require){
         if(hash.length === 2 && hash[0] === 'modal') {
            var dest = hash[1];
       
-            $('#myModal').load('getModal?desc='+dest+'');
+            $('#myModal').load('/options/getModal?desc='+dest+'');
           
            
         }
