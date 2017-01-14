@@ -14,7 +14,9 @@ define(function(require){
     
   var player = require('./app/modules/player');
     
- var options = require('./app/modules/options');    
+  var options = require('./app/modules/options');    
+ 
+  var events = require('./app/modules/events');    
     
     
   //ff.init();
@@ -37,6 +39,12 @@ define(function(require){
  else if(clientUrl[0] === "options"){
      options.init(clientUrl[1], baseUrl);
  }
+ 
+ else if(clientUrl[0] === "events"){
+     events.init(clientUrl[1], baseUrl);
+ }
+ 
+  
  else{
      
   $('body').css('color','green');

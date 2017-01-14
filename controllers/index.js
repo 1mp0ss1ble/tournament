@@ -16,7 +16,10 @@ router.use('/players', require('./players'));
 
 router.use('/events', require('./events'));
 
+router.use('/seasons', require('./seasons'));
+
 router.use('/options', require('./options'));
+
 
 
 

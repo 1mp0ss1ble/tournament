@@ -20,7 +20,9 @@ router.get('/getModal',function(req,res){
 
 
 router.post('/create',function(req,res){
-   res.redirect('/');
+   model.save(req.body,function(err, model){
+    res.redirect('events/event?desc="'+model.desc+'"')
+   });
 });
 
 

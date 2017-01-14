@@ -12,7 +12,7 @@ define(function(require){
         if(hash.length === 2 && hash[0] === 'modal') {
            var dest = hash[1];
       
-            $('#myModal').load('/options/getModal?desc='+dest+'');
+            $('#myModal').load('options/getModal?desc='+dest+'');
           
            
         }
@@ -26,7 +26,11 @@ define(function(require){
         var player = local_data;
 
         $(window).on('hashchange', handleHash);
-        
+          
+        $('body').on('keyup change','.uniqeDesc',function(){
+         console.log('trimm');
+         $(this).val($(this).val().trim()); 
+        })
         
         $('#modal-event').click(function(){
             location.hash = "#modal/event";

@@ -1,14 +1,24 @@
-script(type='text/javascript').
- var local_data =!{JSON.stringify(event)}
-script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
+extends ../layouts/layout
+block content
+ script(type='text/javascript').
+  var local_data =!{JSON.stringify(event)}
+ script(data-main="/js/app", src="/vendor/bower_components/requirejs/require.js")
 
-style(type='text/css')
+ style(type='text/css')
+
+ h2 Event: #{event.desc.toUpperCase()}
+
+ h3 Seasons:
+ div#event-seasons
   
-h2 Event: #{event.description}
-
-div#event-teams
- h3 Teams
- ul
+ a( id="modal-newseason" href="#modal/newseason" data-toggle="modal" data-target="#myModal") add 
  
+ h4 season detail
+ div#event-season-content
+  p no data
+ 
+ div#event-teams
+  h3 Teams
+  ul
 
-a(href='/events') Go to Events...
+

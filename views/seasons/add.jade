@@ -5,7 +5,7 @@ div.modal-dialog(role="document")
    button.close(type="button" data-dismiss="modal" area-label="Close")
     span(aria-hidden="true") &times;
   div.modal-body
-   form(id="options-event-create" action="events/add" method="POST")
+   form(id="options-event-create" action="seasons/add" method="POST")
     input(type="text" hidden value="event")
     div.input-group
      input.form-control.uniqeDesc(type="text"  name="desc" required placeholder="description") 
@@ -13,6 +13,3 @@ div.modal-dialog(role="document")
       input.btn.btn-primary(value="create" type="submit")
       
     
-   
-  
-   

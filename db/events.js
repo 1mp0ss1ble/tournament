@@ -31,6 +31,19 @@ exports.getAll = function(cb){
     });
 }
 
+
+exports.searchByDesc = function(description, cb){
+ description = description.trim().toLowerCase();
+ 
+ Model.findOne({desc:description}, cb);
+}
+
+
+exports.add = function(model, cb){
+  var event = new Model(model);
+  event.save(cb);
+}
+
 /*
 exports.getAll = function(req, res){
   var events = [];
